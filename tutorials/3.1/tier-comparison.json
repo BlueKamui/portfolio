@@ -1,0 +1,22 @@
+[
+  {
+    "model": "claude-haiku-4-5",
+    "turns": 2,
+    "wall_clock_ms": 3984,
+    "total_cost_usd": 0.004335,
+    "tokens_in": 2399,
+    "tokens_in_cached": 0,
+    "tokens_out": 195,
+    "answer": "17 plus 25 equals **42**."
+  },
+  {
+    "model": "claude-sonnet-5",
+    "turns": 2,
+    "wall_clock_ms": 4199,
+    "total_cost_usd": 0.007937,
+    "tokens_in": 1990,
+    "tokens_in_cached": 0,
+    "tokens_out": 89,
+    "answer": "17 plus 25 equals **42**."
+  }
+]

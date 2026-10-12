@@ -1,0 +1,1709 @@
+[
+  {
+    "subtype": "init",
+    "data": {
+      "type": "system",
+      "subtype": "init",
+      "cwd": "/Users/youssefhaddouch/portfolio/tutorials/3.1",
+      "session_id": "0d1563fa-7fcd-454d-a896-e2329030ee14",
+      "tools": [
+        "mcp__calculator__add"
+      ],
+      "mcp_servers": [
+        {
+          "name": "calculator",
+          "status": "connected",
+          "source": "sdk"
+        }
+      ],
+      "model": "claude-opus-5-5",
+      "permissionMode": "default",
+      "slash_commands": [
+        "design",
+        "design-sync",
+        "dataviz",
+        "update-config",
+        "verify",
+        "debug",
+        "code-review",
+        "simplify",
+        "batch",
+        "fewer-permission-prompts",
+        "doctor",
+        "loop",
+        "schedule",
+        "claude-api",
+        "run",
+        "run-skill-generator",
+        "advisor",
+        "agents",
+        "auto-mode-setup",
+        "autocompact",
+        "clear",
+        "color",
+        "compact",
+        "config",
+        "output-style",
+        "context",
+        "effort",
+        "fast",
+        "focus",
+        "heapdump",
+        "init",
+        "mcp",
+        "import",
+        "model",
+        "__remote-workflow",
+        "workflow-launch-exec",
+        "reload-plugins",
+        "reload-skills",
+        "rename",
+        "ultrareview",
+        "security-review",
+        "usage-credits",
+        "extra-usage",
+        "usage",
+        "insights",
+        "recap",
+        "skill-doctor",
+        "goal",
+        "design-consent",
+        "design-revoke",
+        "list-agents",
+        "team-onboarding"
+      ],
+      "terminal_slash_commands": [
+        "doctor",
+        "color",
+        "focus",
+        "reload-plugins"
+      ],
+      "apiKeySource": "none",
+      "claude_code_version": "2.1.284",
+      "output_style": "default",
+      "agents": [
+        "claude",
+        "Explore",
+        "general-purpose",
+        "Plan",
+        "statusline-setup"
+      ],
+      "skills": [
+        "design",
+        "design-sync",
+        "dataviz",
+        "update-config",
+        "verify",
+        "debug",
+        "code-review",
+        "simplify",
+        "batch",
+        "fewer-permission-prompts",
+        "doctor",
+        "loop",
+        "schedule",
+        "claude-api",
+        "run",
+        "run-skill-generator"
+      ],
+      "plugins": [
+        {
+          "name": "telemetry",
+          "path": "builtin",
+          "source": "telemetry@builtin"
+        }
+      ],
+      "capabilities": [
+        "interrupt_receipt_v1",
+        "interrupt_cancel_queued_v1",
+        "msg_lifecycle_v1",
+        "mcp_read_resource_v1",
+        "mcp_tool_ui_meta_v1"
+      ],
+      "analytics_disabled": false,
+      "product_feedback_disabled": false,
+      "uuid": "7cba716e-f547-4197-81d0-5581c3f50f86",
+      "memory_paths": {
+        "auto": "/Users/youssefhaddouch/.claude/projects/-Users-youssefhaddouch-portfolio/memory/"
+      },
+      "messaging_socket_path": "/tmp/cc-socks/35367.sock",
+      "fast_mode_state": "off",
+      "fast_mode_disabled_reason": "sdk_opt_in_required",
+      "per_turn_effort_active": true,
+      "view_mode": "default"
+    }
+  },
+  {
+    "subtype": "commands_changed",
+    "data": {
+      "type": "system",
+      "subtype": "commands_changed",
+      "commands": [
+        {
+          "name": "deep-research",
+          "description": "Deep research harness \u2014 fan-out web searches, fetch sources, adversarially verify claims, synthesize a cited report. (dynamic workflow)",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "design",
+          "description": "Grant or revoke Claude agent access to your Design projects",
+          "argumentHint": "consent | revoke",
+          "builtin": true
+        },
+        {
+          "name": "design-sync",
+          "description": "Push a React design system to claude.ai/design. This runs a converter that bundles the real component code (from Storybook or a bare package) and uploads it. Use when the user runs /design-sync or says \"sync my design system to Claude Design\".",
+          "argumentHint": "[<project hint, e.g. \"Acme DS\">]",
+          "builtin": true
+        },
+        {
+          "name": "dataviz",
+          "description": "Use this skill whenever you are about to create ANY chart, graph, plot, dashboard, or data visualization, in ANY output medium \u2014 an HTML or React artifact, inline SVG, plotting code in any library (matplotlib, plotly, d3, Recharts, \u2026), an image/PNG you will render and upload, or a chart shared into Slack. Read it BEFORE writing the first line of chart code, choosing chart colors, building a stat tile / meter / KPI row, or laying out a dashboard. When the destination is a first-party document connector (host-designated, never self-described) that renders live charts, hand it the rows (inline, or as an uploaded data file the chart cites) rather than a rendered PNG/SVG \u2014 a picture of a chart loses hover, data inspection and per-value comments. Produces visualizations that read as one system \u2014 elegant, accessible, consistent in light and dark \u2014 using a brand-neutral placeholder palette you swap for your own. Teaches a design-system-agnostic method: a form heuristic, a color formula with a runnable validator, mark specs, and interaction rules. A validated default palette is documented in `references/palette.md` \u2014 swap that file's values for your brand's. Triggers on: \"chart\", \"graph\", \"plot\", \"data viz\", \"visualization\", \"dashboard\", \"analytics\", \"visualize data\", \"categorical colors\", \"sequential / diverging palette\", \"stat tile\", \"sparkline\", \"heatmap\", \"legend\", \"axis\", \"tooltip\", \"chart colors\", \"color by series\".",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "update-config",
+          "description": "Use this skill to configure the Claude Code harness via settings.json. Automated behaviors (\"from now on when X\", \"each time X\", \"whenever X\", \"before/after X\") require hooks configured in settings.json - the harness executes these, not Claude, so memory/preferences cannot fulfill them. Also use for: permissions (\"allow X\", \"add permission\", \"move permission to\"), env vars (\"set X=Y\"), hook troubleshooting, or any changes to settings.json/settings.local.json files. Examples: \"allow npm commands\", \"add bq permission to global settings\", \"move permission to user settings\", \"set DEBUG=true\", \"when claude stops show X\". For simple settings like theme/model, suggest the /config command.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "verify",
+          "description": "Verify that a code change actually does what it's supposed to by exercising it end-to-end and observing behavior \u2014 drive the affected flow, not just tests or typecheck. Run before committing nontrivial changes; bootstraps this repo's project verify skill if none exists yet. Don't invoke it on a diff that only touches tests, docs, or other code with no runtime surface to drive (a change to product source always has one) \u2014 there's nothing to observe.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "debug",
+          "description": "Enable debug logging for this session and help diagnose issues",
+          "argumentHint": "[issue description]",
+          "builtin": true
+        },
+        {
+          "name": "code-review",
+          "description": "Review the current diff, or a PR number/branch/path target, for correctness bugs (plus reuse/simplification/efficiency cleanups where the model's review recipe covers them) at the given effort level (low/medium: fewer, high-confidence findings; high\u2192max: broader coverage, may include uncertain findings; ultra: deep multi-agent review in the cloud); with no level given, it reuses the level you typed last. Pass --comment to post findings as inline PR comments, or --fix to apply the findings to the working tree after the review. For ultra on a GitHub.com PR target, --post asks to post the finished review\u2019s findings to the PR as a single comment from the user\u2019s GitHub account (not a review; the launch dialog still confirms in interactive sessions, while non-interactive mode posts on the flag alone) and --no-post hides that option.",
+          "argumentHint": "[low|medium|high|xhigh|max|ultra] [--fix] [--comment] [<pr#>|<branch>|<path>]",
+          "aliases": [
+            "review"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "simplify",
+          "description": "Review the changed code for reuse, simplification, efficiency, and altitude cleanups, then apply the fixes. Quality only \u2014 it does not hunt for bugs; use /code-review for that.",
+          "argumentHint": "[<target>]",
+          "builtin": true
+        },
+        {
+          "name": "batch",
+          "description": "Research and plan a large-scale change, then execute it in parallel across 5\u201330 isolated worktree agents that each open a PR.",
+          "argumentHint": "<instruction>",
+          "builtin": true
+        },
+        {
+          "name": "fewer-permission-prompts",
+          "description": "Scan your transcripts for common read-only Bash and MCP tool calls, then add a prioritized allowlist to project .claude/settings.json to reduce permission prompts.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "doctor",
+          "description": "Health-check the user's Claude Code setup and fix issues: diagnose installation health \u2014 what the `claude doctor` terminal diagnostics cover \u2014 from local data (duplicate or leftover installs, PATH, unparseable settings files, broken or colliding agent definitions, skills whose frontmatter fails to parse); find unused skills, MCP servers, and plugins versus their context cost and disable dead weight; deduplicate local CLAUDE.md files against checked-in ones; trim checked-in CLAUDE.md files by cutting content a session could derive from the codebase (directory layouts, tech-stack lists, architecture overviews) while keeping gotchas, rationale, and non-standard conventions; migrate always-loaded CLAUDE.md guidance into lazy skills and nested CLAUDE.md files; flag slow hooks and context-heavy extensions; check the installed version is current; make auto mode the default permission mode; and pre-approve frequently denied read-only commands. Use when the user asks for a doctor run, checkup, audit, tune-up, or cleanup of their Claude Code setup or configuration.",
+          "argumentHint": "[prompt-audit [<path>]]",
+          "aliases": [
+            "checkup"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "loop",
+          "description": "Run a prompt or slash command on a recurring interval (e.g. /loop 5m /foo). Omit the interval to let the model self-pace.",
+          "argumentHint": "[interval] [prompt]",
+          "aliases": [
+            "proactive"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "claude-api",
+          "description": "Reference for the Claude API / Anthropic SDK \u2014 model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration.\nTRIGGER \u2014 read BEFORE opening the target file; don't skip because it \"looks like a one-liner\" \u2014 whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) \u2014 never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens).\nSKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama'` over the project hits (run this grep FIRST if no provider named \u2014 don't Read the file).",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "workflow-authoring",
+          "description": "Reference for writing a Workflow tool script (script API and gotchas, resume, quality patterns, worked examples). Load before authoring a script for a workflow the user already opted into; it does not itself authorize running one.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "run",
+          "description": "Launch and drive this project's app to see a change working. Use when asked to run, start, or screenshot the app, or to confirm a change works in the real app (not just tests). First looks for a project skill that already covers launching the app; otherwise falls back to built-in patterns per project type (CLI, server, TUI, Electron, browser-driven, library).",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "run-skill-generator",
+          "description": "Author or improve the run-<unit> skill - a per-project skill that tells agents how to build, launch, and drive this project's app. Use when the user asks to set up the project, get it running, write run instructions, or verify build/run steps work from a clean environment.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "advisor",
+          "description": "Let Claude consult a stronger model at key moments",
+          "argumentHint": "[fable|opus|sonnet|off]",
+          "builtin": true
+        },
+        {
+          "name": "agents",
+          "description": "(removed) Ask Claude to create/manage subagents, or edit .claude/agents/",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "auto-mode-setup",
+          "description": "Teach auto mode about your environment, plus optional rule tweaks",
+          "argumentHint": "[--request-id <uuid>] (--wizard posture=\u2026 scope=\u2026 depth=\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
+          "builtin": true
+        },
+        {
+          "name": "autocompact",
+          "description": "Configure the auto-compact window size",
+          "argumentHint": "[auto|<tokens>]",
+          "builtin": true
+        },
+        {
+          "name": "clear",
+          "description": "Start a new session with empty context; previous session stays on disk (resumable with /resume)",
+          "argumentHint": "[name]",
+          "aliases": [
+            "reset",
+            "new"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "color",
+          "description": "Set the prompt bar color for this session",
+          "argumentHint": "[red|blue|green|yellow|purple|orange|pink|cyan|default]",
+          "builtin": true
+        },
+        {
+          "name": "compact",
+          "description": "Free up context by summarizing the conversation so far",
+          "argumentHint": "<optional custom summarization instructions>",
+          "builtin": true
+        },
+        {
+          "name": "config",
+          "description": "Set a setting by key",
+          "argumentHint": "key=value",
+          "aliases": [
+            "settings"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "output-style",
+          "description": "List output styles or switch to one",
+          "argumentHint": "[style]",
+          "builtin": true
+        },
+        {
+          "name": "context",
+          "description": "Show current context usage",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "effort",
+          "description": "Set effort level for model usage",
+          "argumentHint": "<low|medium|high|xhigh|max|auto|ultracode [on|off]>",
+          "builtin": true
+        },
+        {
+          "name": "fast",
+          "description": "Toggle fast mode (Opus 5.5)",
+          "argumentHint": "[on|off]",
+          "builtin": true
+        },
+        {
+          "name": "focus",
+          "description": "Toggle focus view: just your prompt, summary, and response",
+          "argumentHint": "[on|off]",
+          "builtin": true
+        },
+        {
+          "name": "init",
+          "description": "Initialize a new CLAUDE.md file with codebase documentation",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "mcp",
+          "description": "Manage MCP servers",
+          "argumentHint": "[reconnect|enable|disable [<server>|all]]",
+          "builtin": true
+        },
+        {
+          "name": "import",
+          "description": "Import config from another AI coding agent",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "model",
+          "description": "Set the AI model for Claude Code",
+          "argumentHint": "<model>",
+          "builtin": true
+        },
+        {
+          "name": "__remote-workflow",
+          "description": "Run the workflow script delivered in this session environment (server-launched sessions only)",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "workflow-launch-exec",
+          "description": "Execute a server-launched workflow handoff (workflow_launch event sessions only)",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "reload-plugins",
+          "description": "Activate pending plugin changes in the current session",
+          "argumentHint": "[--force]",
+          "builtin": true
+        },
+        {
+          "name": "reload-skills",
+          "description": "Pick up skills added or changed on disk during this session",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "rename",
+          "description": "Rename the current conversation",
+          "argumentHint": "[name]",
+          "aliases": [
+            "name"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "ultrareview",
+          "description": "Start a cloud agent that finds and verifies bugs in your branch (~15-25 min, $5-$25 USD) \u00b7 Runs in a cloud session. See https://code.claude.com/docs/en/claude-code-on-the-web",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "security-review",
+          "description": "Complete a security review of the pending changes on the current branch",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "usage-credits",
+          "description": "Configure usage credits or request them from your admin when you hit a limit",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "extra-usage",
+          "description": "Renamed to /usage-credits",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "usage",
+          "description": "Show session cost, plan usage, and what's contributing to your limits",
+          "argumentHint": "",
+          "aliases": [
+            "cost",
+            "stats"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "insights",
+          "description": "Generate a report analyzing your Claude Code sessions",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "recap",
+          "description": "Generate a one-line session recap now",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "skill-doctor",
+          "description": "Show which loaded skills are unused and costing context",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "goal",
+          "description": "Set a goal \u2014 keep working until the condition is met",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "design-consent",
+          "description": "Grant Claude agent access to your Design projects",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "design-revoke",
+          "description": "Revoke Claude agent access to your Design projects",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "list-agents",
+          "description": "List subagents, teammates, and other Claude sessions you can message",
+          "argumentHint": "",
+          "aliases": [
+            "peers"
+          ],
+          "builtin": true
+        }
+      ],
+      "uuid": "9ae35759-2680-40e1-8f1f-5a292f8edfc0",
+      "session_id": "0d1563fa-7fcd-454d-a896-e2329030ee14"
+    }
+  },
+  {
+    "subtype": "commands_changed",
+    "data": {
+      "type": "system",
+      "subtype": "commands_changed",
+      "commands": [
+        {
+          "name": "deep-research",
+          "description": "Deep research harness \u2014 fan-out web searches, fetch sources, adversarially verify claims, synthesize a cited report. (dynamic workflow)",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "design",
+          "description": "Grant or revoke Claude agent access to your Design projects",
+          "argumentHint": "consent | revoke",
+          "builtin": true
+        },
+        {
+          "name": "design-sync",
+          "description": "Push a React design system to claude.ai/design. This runs a converter that bundles the real component code (from Storybook or a bare package) and uploads it. Use when the user runs /design-sync or says \"sync my design system to Claude Design\".",
+          "argumentHint": "[<project hint, e.g. \"Acme DS\">]",
+          "builtin": true
+        },
+        {
+          "name": "dataviz",
+          "description": "Use this skill whenever you are about to create ANY chart, graph, plot, dashboard, or data visualization, in ANY output medium \u2014 an HTML or React artifact, inline SVG, plotting code in any library (matplotlib, plotly, d3, Recharts, \u2026), an image/PNG you will render and upload, or a chart shared into Slack. Read it BEFORE writing the first line of chart code, choosing chart colors, building a stat tile / meter / KPI row, or laying out a dashboard. When the destination is a first-party document connector (host-designated, never self-described) that renders live charts, hand it the rows (inline, or as an uploaded data file the chart cites) rather than a rendered PNG/SVG \u2014 a picture of a chart loses hover, data inspection and per-value comments. Produces visualizations that read as one system \u2014 elegant, accessible, consistent in light and dark \u2014 using a brand-neutral placeholder palette you swap for your own. Teaches a design-system-agnostic method: a form heuristic, a color formula with a runnable validator, mark specs, and interaction rules. A validated default palette is documented in `references/palette.md` \u2014 swap that file's values for your brand's. Triggers on: \"chart\", \"graph\", \"plot\", \"data viz\", \"visualization\", \"dashboard\", \"analytics\", \"visualize data\", \"categorical colors\", \"sequential / diverging palette\", \"stat tile\", \"sparkline\", \"heatmap\", \"legend\", \"axis\", \"tooltip\", \"chart colors\", \"color by series\".",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "update-config",
+          "description": "Use this skill to configure the Claude Code harness via settings.json. Automated behaviors (\"from now on when X\", \"each time X\", \"whenever X\", \"before/after X\") require hooks configured in settings.json - the harness executes these, not Claude, so memory/preferences cannot fulfill them. Also use for: permissions (\"allow X\", \"add permission\", \"move permission to\"), env vars (\"set X=Y\"), hook troubleshooting, or any changes to settings.json/settings.local.json files. Examples: \"allow npm commands\", \"add bq permission to global settings\", \"move permission to user settings\", \"set DEBUG=true\", \"when claude stops show X\". For simple settings like theme/model, suggest the /config command.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "verify",
+          "description": "Verify that a code change actually does what it's supposed to by exercising it end-to-end and observing behavior \u2014 drive the affected flow, not just tests or typecheck. Run before committing nontrivial changes; bootstraps this repo's project verify skill if none exists yet. Don't invoke it on a diff that only touches tests, docs, or other code with no runtime surface to drive (a change to product source always has one) \u2014 there's nothing to observe.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "debug",
+          "description": "Enable debug logging for this session and help diagnose issues",
+          "argumentHint": "[issue description]",
+          "builtin": true
+        },
+        {
+          "name": "code-review",
+          "description": "Review the current diff, or a PR number/branch/path target, for correctness bugs (plus reuse/simplification/efficiency cleanups where the model's review recipe covers them) at the given effort level (low/medium: fewer, high-confidence findings; high\u2192max: broader coverage, may include uncertain findings; ultra: deep multi-agent review in the cloud); with no level given, it reuses the level you typed last. Pass --comment to post findings as inline PR comments, or --fix to apply the findings to the working tree after the review. For ultra on a GitHub.com PR target, --post asks to post the finished review\u2019s findings to the PR as a single comment from the user\u2019s GitHub account (not a review; the launch dialog still confirms in interactive sessions, while non-interactive mode posts on the flag alone) and --no-post hides that option.",
+          "argumentHint": "[low|medium|high|xhigh|max|ultra] [--fix] [--comment] [<pr#>|<branch>|<path>]",
+          "aliases": [
+            "review"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "simplify",
+          "description": "Review the changed code for reuse, simplification, efficiency, and altitude cleanups, then apply the fixes. Quality only \u2014 it does not hunt for bugs; use /code-review for that.",
+          "argumentHint": "[<target>]",
+          "builtin": true
+        },
+        {
+          "name": "batch",
+          "description": "Research and plan a large-scale change, then execute it in parallel across 5\u201330 isolated worktree agents that each open a PR.",
+          "argumentHint": "<instruction>",
+          "builtin": true
+        },
+        {
+          "name": "fewer-permission-prompts",
+          "description": "Scan your transcripts for common read-only Bash and MCP tool calls, then add a prioritized allowlist to project .claude/settings.json to reduce permission prompts.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "doctor",
+          "description": "Health-check the user's Claude Code setup and fix issues: diagnose installation health \u2014 what the `claude doctor` terminal diagnostics cover \u2014 from local data (duplicate or leftover installs, PATH, unparseable settings files, broken or colliding agent definitions, skills whose frontmatter fails to parse); find unused skills, MCP servers, and plugins versus their context cost and disable dead weight; deduplicate local CLAUDE.md files against checked-in ones; trim checked-in CLAUDE.md files by cutting content a session could derive from the codebase (directory layouts, tech-stack lists, architecture overviews) while keeping gotchas, rationale, and non-standard conventions; migrate always-loaded CLAUDE.md guidance into lazy skills and nested CLAUDE.md files; flag slow hooks and context-heavy extensions; check the installed version is current; make auto mode the default permission mode; and pre-approve frequently denied read-only commands. Use when the user asks for a doctor run, checkup, audit, tune-up, or cleanup of their Claude Code setup or configuration.",
+          "argumentHint": "[prompt-audit [<path>]]",
+          "aliases": [
+            "checkup"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "loop",
+          "description": "Run a prompt or slash command on a recurring interval (e.g. /loop 5m /foo). Omit the interval to let the model self-pace.",
+          "argumentHint": "[interval] [prompt]",
+          "aliases": [
+            "proactive"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "claude-api",
+          "description": "Reference for the Claude API / Anthropic SDK \u2014 model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration.\nTRIGGER \u2014 read BEFORE opening the target file; don't skip because it \"looks like a one-liner\" \u2014 whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) \u2014 never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens).\nSKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama'` over the project hits (run this grep FIRST if no provider named \u2014 don't Read the file).",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "workflow-authoring",
+          "description": "Reference for writing a Workflow tool script (script API and gotchas, resume, quality patterns, worked examples). Load before authoring a script for a workflow the user already opted into; it does not itself authorize running one.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "run",
+          "description": "Launch and drive this project's app to see a change working. Use when asked to run, start, or screenshot the app, or to confirm a change works in the real app (not just tests). First looks for a project skill that already covers launching the app; otherwise falls back to built-in patterns per project type (CLI, server, TUI, Electron, browser-driven, library).",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "run-skill-generator",
+          "description": "Author or improve the run-<unit> skill - a per-project skill that tells agents how to build, launch, and drive this project's app. Use when the user asks to set up the project, get it running, write run instructions, or verify build/run steps work from a clean environment.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "advisor",
+          "description": "Let Claude consult a stronger model at key moments",
+          "argumentHint": "[fable|opus|sonnet|off]",
+          "builtin": true
+        },
+        {
+          "name": "agents",
+          "description": "(removed) Ask Claude to create/manage subagents, or edit .claude/agents/",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "auto-mode-setup",
+          "description": "Teach auto mode about your environment, plus optional rule tweaks",
+          "argumentHint": "[--request-id <uuid>] (--wizard posture=\u2026 scope=\u2026 depth=\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
+          "builtin": true
+        },
+        {
+          "name": "autocompact",
+          "description": "Configure the auto-compact window size",
+          "argumentHint": "[auto|<tokens>]",
+          "builtin": true
+        },
+        {
+          "name": "clear",
+          "description": "Start a new session with empty context; previous session stays on disk (resumable with /resume)",
+          "argumentHint": "[name]",
+          "aliases": [
+            "reset",
+            "new"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "color",
+          "description": "Set the prompt bar color for this session",
+          "argumentHint": "[red|blue|green|yellow|purple|orange|pink|cyan|default]",
+          "builtin": true
+        },
+        {
+          "name": "compact",
+          "description": "Free up context by summarizing the conversation so far",
+          "argumentHint": "<optional custom summarization instructions>",
+          "builtin": true
+        },
+        {
+          "name": "config",
+          "description": "Set a setting by key",
+          "argumentHint": "key=value",
+          "aliases": [
+            "settings"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "output-style",
+          "description": "List output styles or switch to one",
+          "argumentHint": "[style]",
+          "builtin": true
+        },
+        {
+          "name": "context",
+          "description": "Show current context usage",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "effort",
+          "description": "Set effort level for model usage",
+          "argumentHint": "<low|medium|high|xhigh|max|auto|ultracode [on|off]>",
+          "builtin": true
+        },
+        {
+          "name": "fast",
+          "description": "Toggle fast mode (Opus 5.5)",
+          "argumentHint": "[on|off]",
+          "builtin": true
+        },
+        {
+          "name": "focus",
+          "description": "Toggle focus view: just your prompt, summary, and response",
+          "argumentHint": "[on|off]",
+          "builtin": true
+        },
+        {
+          "name": "init",
+          "description": "Initialize a new CLAUDE.md file with codebase documentation",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "mcp",
+          "description": "Manage MCP servers",
+          "argumentHint": "[reconnect|enable|disable [<server>|all]]",
+          "builtin": true
+        },
+        {
+          "name": "import",
+          "description": "Import config from another AI coding agent",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "model",
+          "description": "Set the AI model for Claude Code",
+          "argumentHint": "<model>",
+          "builtin": true
+        },
+        {
+          "name": "__remote-workflow",
+          "description": "Run the workflow script delivered in this session environment (server-launched sessions only)",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "workflow-launch-exec",
+          "description": "Execute a server-launched workflow handoff (workflow_launch event sessions only)",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "reload-plugins",
+          "description": "Activate pending plugin changes in the current session",
+          "argumentHint": "[--force]",
+          "builtin": true
+        },
+        {
+          "name": "reload-skills",
+          "description": "Pick up skills added or changed on disk during this session",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "rename",
+          "description": "Rename the current conversation",
+          "argumentHint": "[name]",
+          "aliases": [
+            "name"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "ultrareview",
+          "description": "Start a cloud agent that finds and verifies bugs in your branch (~15-25 min, $5-$25 USD) \u00b7 Runs in a cloud session. See https://code.claude.com/docs/en/claude-code-on-the-web",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "security-review",
+          "description": "Complete a security review of the pending changes on the current branch",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "usage-credits",
+          "description": "Configure usage credits or request them from your admin when you hit a limit",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "extra-usage",
+          "description": "Renamed to /usage-credits",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "usage",
+          "description": "Show session cost, plan usage, and what's contributing to your limits",
+          "argumentHint": "",
+          "aliases": [
+            "cost",
+            "stats"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "insights",
+          "description": "Generate a report analyzing your Claude Code sessions",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "recap",
+          "description": "Generate a one-line session recap now",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "skill-doctor",
+          "description": "Show which loaded skills are unused and costing context",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "goal",
+          "description": "Set a goal \u2014 keep working until the condition is met",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "design-consent",
+          "description": "Grant Claude agent access to your Design projects",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "design-revoke",
+          "description": "Revoke Claude agent access to your Design projects",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "list-agents",
+          "description": "List subagents, teammates, and other Claude sessions you can message",
+          "argumentHint": "",
+          "aliases": [
+            "peers"
+          ],
+          "builtin": true
+        }
+      ],
+      "uuid": "4ed0ddc6-63a7-4c20-9f1b-d9f1e6c4d802",
+      "session_id": "0d1563fa-7fcd-454d-a896-e2329030ee14"
+    }
+  },
+  {
+    "subtype": "commands_changed",
+    "data": {
+      "type": "system",
+      "subtype": "commands_changed",
+      "commands": [
+        {
+          "name": "design",
+          "description": "Grant or revoke Claude agent access to your Design projects",
+          "argumentHint": "consent | revoke",
+          "builtin": true
+        },
+        {
+          "name": "design-sync",
+          "description": "Push a React design system to claude.ai/design. This runs a converter that bundles the real component code (from Storybook or a bare package) and uploads it. Use when the user runs /design-sync or says \"sync my design system to Claude Design\".",
+          "argumentHint": "[<project hint, e.g. \"Acme DS\">]",
+          "builtin": true
+        },
+        {
+          "name": "dataviz",
+          "description": "Use this skill whenever you are about to create ANY chart, graph, plot, dashboard, or data visualization, in ANY output medium \u2014 an HTML or React artifact, inline SVG, plotting code in any library (matplotlib, plotly, d3, Recharts, \u2026), an image/PNG you will render and upload, or a chart shared into Slack. Read it BEFORE writing the first line of chart code, choosing chart colors, building a stat tile / meter / KPI row, or laying out a dashboard. When the destination is a first-party document connector (host-designated, never self-described) that renders live charts, hand it the rows (inline, or as an uploaded data file the chart cites) rather than a rendered PNG/SVG \u2014 a picture of a chart loses hover, data inspection and per-value comments. Produces visualizations that read as one system \u2014 elegant, accessible, consistent in light and dark \u2014 using a brand-neutral placeholder palette you swap for your own. Teaches a design-system-agnostic method: a form heuristic, a color formula with a runnable validator, mark specs, and interaction rules. A validated default palette is documented in `references/palette.md` \u2014 swap that file's values for your brand's. Triggers on: \"chart\", \"graph\", \"plot\", \"data viz\", \"visualization\", \"dashboard\", \"analytics\", \"visualize data\", \"categorical colors\", \"sequential / diverging palette\", \"stat tile\", \"sparkline\", \"heatmap\", \"legend\", \"axis\", \"tooltip\", \"chart colors\", \"color by series\".",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "update-config",
+          "description": "Use this skill to configure the Claude Code harness via settings.json. Automated behaviors (\"from now on when X\", \"each time X\", \"whenever X\", \"before/after X\") require hooks configured in settings.json - the harness executes these, not Claude, so memory/preferences cannot fulfill them. Also use for: permissions (\"allow X\", \"add permission\", \"move permission to\"), env vars (\"set X=Y\"), hook troubleshooting, or any changes to settings.json/settings.local.json files. Examples: \"allow npm commands\", \"add bq permission to global settings\", \"move permission to user settings\", \"set DEBUG=true\", \"when claude stops show X\". For simple settings like theme/model, suggest the /config command.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "verify",
+          "description": "Verify that a code change actually does what it's supposed to by exercising it end-to-end and observing behavior \u2014 drive the affected flow, not just tests or typecheck. Run before committing nontrivial changes; bootstraps this repo's project verify skill if none exists yet. Don't invoke it on a diff that only touches tests, docs, or other code with no runtime surface to drive (a change to product source always has one) \u2014 there's nothing to observe.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "debug",
+          "description": "Enable debug logging for this session and help diagnose issues",
+          "argumentHint": "[issue description]",
+          "builtin": true
+        },
+        {
+          "name": "code-review",
+          "description": "Review the current diff, or a PR number/branch/path target, for correctness bugs (plus reuse/simplification/efficiency cleanups where the model's review recipe covers them) at the given effort level (low/medium: fewer, high-confidence findings; high\u2192max: broader coverage, may include uncertain findings); with no level given, it reuses the level you typed last. Pass --comment to post findings as inline PR comments, or --fix to apply the findings to the working tree after the review.",
+          "argumentHint": "[low|medium|high|xhigh|max] [--fix] [--comment] [<pr#>|<branch>|<path>]",
+          "aliases": [
+            "review"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "simplify",
+          "description": "Review the changed code for reuse, simplification, efficiency, and altitude cleanups, then apply the fixes. Quality only \u2014 it does not hunt for bugs; use /code-review for that.",
+          "argumentHint": "[<target>]",
+          "builtin": true
+        },
+        {
+          "name": "batch",
+          "description": "Research and plan a large-scale change, then execute it in parallel across 5\u201330 isolated worktree agents that each open a PR.",
+          "argumentHint": "<instruction>",
+          "builtin": true
+        },
+        {
+          "name": "fewer-permission-prompts",
+          "description": "Scan your transcripts for common read-only Bash and MCP tool calls, then add a prioritized allowlist to project .claude/settings.json to reduce permission prompts.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "doctor",
+          "description": "Health-check the user's Claude Code setup and fix issues: diagnose installation health \u2014 what the `claude doctor` terminal diagnostics cover \u2014 from local data (duplicate or leftover installs, PATH, unparseable settings files, broken or colliding agent definitions, skills whose frontmatter fails to parse); find unused skills, MCP servers, and plugins versus their context cost and disable dead weight; deduplicate local CLAUDE.md files against checked-in ones; trim checked-in CLAUDE.md files by cutting content a session could derive from the codebase (directory layouts, tech-stack lists, architecture overviews) while keeping gotchas, rationale, and non-standard conventions; migrate always-loaded CLAUDE.md guidance into lazy skills and nested CLAUDE.md files; flag slow hooks and context-heavy extensions; check the installed version is current; make auto mode the default permission mode; and pre-approve frequently denied read-only commands. Use when the user asks for a doctor run, checkup, audit, tune-up, or cleanup of their Claude Code setup or configuration.",
+          "argumentHint": "[prompt-audit [<path>]]",
+          "aliases": [
+            "checkup"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "loop",
+          "description": "Run a prompt or slash command on a recurring interval (e.g. /loop 5m /foo). Omit the interval to let the model self-pace.",
+          "argumentHint": "[interval] [prompt]",
+          "aliases": [
+            "proactive"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "schedule",
+          "description": "Create, update, list, or run scheduled cloud agents (routines) that execute on a cron schedule.",
+          "argumentHint": "",
+          "aliases": [
+            "routines"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "claude-api",
+          "description": "Reference for the Claude API / Anthropic SDK \u2014 model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration.\nTRIGGER \u2014 read BEFORE opening the target file; don't skip because it \"looks like a one-liner\" \u2014 whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) \u2014 never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens).\nSKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama'` over the project hits (run this grep FIRST if no provider named \u2014 don't Read the file).",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "run",
+          "description": "Launch and drive this project's app to see a change working. Use when asked to run, start, or screenshot the app, or to confirm a change works in the real app (not just tests). First looks for a project skill that already covers launching the app; otherwise falls back to built-in patterns per project type (CLI, server, TUI, Electron, browser-driven, library).",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "run-skill-generator",
+          "description": "Author or improve the run-<unit> skill - a per-project skill that tells agents how to build, launch, and drive this project's app. Use when the user asks to set up the project, get it running, write run instructions, or verify build/run steps work from a clean environment.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "advisor",
+          "description": "Let Claude consult a stronger model at key moments",
+          "argumentHint": "[fable|opus|sonnet|off]",
+          "builtin": true
+        },
+        {
+          "name": "agents",
+          "description": "(removed) Ask Claude to create/manage subagents, or edit .claude/agents/",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "auto-mode-setup",
+          "description": "Teach auto mode about your environment, plus optional rule tweaks",
+          "argumentHint": "[--request-id <uuid>] (--wizard posture=\u2026 scope=\u2026 depth=\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
+          "builtin": true
+        },
+        {
+          "name": "autocompact",
+          "description": "Configure the auto-compact window size",
+          "argumentHint": "[auto|<tokens>]",
+          "builtin": true
+        },
+        {
+          "name": "clear",
+          "description": "Start a new session with empty context; previous session stays on disk (resumable with /resume)",
+          "argumentHint": "[name]",
+          "aliases": [
+            "reset",
+            "new"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "color",
+          "description": "Set the prompt bar color for this session",
+          "argumentHint": "[red|blue|green|yellow|purple|orange|pink|cyan|default]",
+          "builtin": true
+        },
+        {
+          "name": "compact",
+          "description": "Free up context by summarizing the conversation so far",
+          "argumentHint": "<optional custom summarization instructions>",
+          "builtin": true
+        },
+        {
+          "name": "config",
+          "description": "Set a setting by key",
+          "argumentHint": "key=value",
+          "aliases": [
+            "settings"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "output-style",
+          "description": "List output styles or switch to one",
+          "argumentHint": "[style]",
+          "builtin": true
+        },
+        {
+          "name": "context",
+          "description": "Show current context usage",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "effort",
+          "description": "Set effort level for model usage",
+          "argumentHint": "<low|medium|high|xhigh|max|auto>",
+          "builtin": true
+        },
+        {
+          "name": "fast",
+          "description": "Toggle fast mode (Opus 5.5)",
+          "argumentHint": "[on|off]",
+          "builtin": true
+        },
+        {
+          "name": "focus",
+          "description": "Toggle focus view: just your prompt, summary, and response",
+          "argumentHint": "[on|off]",
+          "builtin": true
+        },
+        {
+          "name": "heapdump",
+          "description": "Dump the JS heap to the Desktop; on Linux with no Desktop folder, the home directory",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "init",
+          "description": "Initialize a new CLAUDE.md file with codebase documentation",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "mcp",
+          "description": "Manage MCP servers",
+          "argumentHint": "[reconnect|enable|disable [<server>|all]]",
+          "builtin": true
+        },
+        {
+          "name": "import",
+          "description": "Import config from another AI coding agent",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "model",
+          "description": "Set the AI model for Claude Code",
+          "argumentHint": "<model>",
+          "builtin": true
+        },
+        {
+          "name": "__remote-workflow",
+          "description": "Run the workflow script delivered in this session environment (server-launched sessions only)",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "workflow-launch-exec",
+          "description": "Execute a server-launched workflow handoff (workflow_launch event sessions only)",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "reload-plugins",
+          "description": "Activate pending plugin changes in the current session",
+          "argumentHint": "[--force]",
+          "builtin": true
+        },
+        {
+          "name": "reload-skills",
+          "description": "Pick up skills added or changed on disk during this session",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "rename",
+          "description": "Rename the current conversation",
+          "argumentHint": "[name]",
+          "aliases": [
+            "name"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "security-review",
+          "description": "Complete a security review of the pending changes on the current branch",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "usage-credits",
+          "description": "Configure usage credits or request them from your admin when you hit a limit",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "extra-usage",
+          "description": "Renamed to /usage-credits",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "usage",
+          "description": "Show session cost, plan usage, and what's contributing to your limits",
+          "argumentHint": "",
+          "aliases": [
+            "cost",
+            "stats"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "insights",
+          "description": "Generate a report analyzing your Claude Code sessions",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "recap",
+          "description": "Generate a one-line session recap now",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "skill-doctor",
+          "description": "Show which loaded skills are unused and costing context",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "goal",
+          "description": "Set a goal \u2014 keep working until the condition is met",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "design-consent",
+          "description": "Grant Claude agent access to your Design projects",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "design-revoke",
+          "description": "Revoke Claude agent access to your Design projects",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "list-agents",
+          "description": "List subagents, teammates, and other Claude sessions you can message",
+          "argumentHint": "",
+          "aliases": [
+            "peers"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "team-onboarding",
+          "description": "Help teammates ramp on Claude Code with a guide from your usage",
+          "argumentHint": "",
+          "builtin": true
+        }
+      ],
+      "uuid": "bd29d96a-9088-4bfd-b501-f146e186b49f",
+      "session_id": "0d1563fa-7fcd-454d-a896-e2329030ee14"
+    }
+  },
+  {
+    "subtype": "commands_changed",
+    "data": {
+      "type": "system",
+      "subtype": "commands_changed",
+      "commands": [
+        {
+          "name": "design",
+          "description": "Grant or revoke Claude agent access to your Design projects",
+          "argumentHint": "consent | revoke",
+          "builtin": true
+        },
+        {
+          "name": "design-sync",
+          "description": "Push a React design system to claude.ai/design. This runs a converter that bundles the real component code (from Storybook or a bare package) and uploads it. Use when the user runs /design-sync or says \"sync my design system to Claude Design\".",
+          "argumentHint": "[<project hint, e.g. \"Acme DS\">]",
+          "builtin": true
+        },
+        {
+          "name": "dataviz",
+          "description": "Use this skill whenever you are about to create ANY chart, graph, plot, dashboard, or data visualization, in ANY output medium \u2014 an HTML or React artifact, inline SVG, plotting code in any library (matplotlib, plotly, d3, Recharts, \u2026), an image/PNG you will render and upload, or a chart shared into Slack. Read it BEFORE writing the first line of chart code, choosing chart colors, building a stat tile / meter / KPI row, or laying out a dashboard. When the destination is a first-party document connector (host-designated, never self-described) that renders live charts, hand it the rows (inline, or as an uploaded data file the chart cites) rather than a rendered PNG/SVG \u2014 a picture of a chart loses hover, data inspection and per-value comments. Produces visualizations that read as one system \u2014 elegant, accessible, consistent in light and dark \u2014 using a brand-neutral placeholder palette you swap for your own. Teaches a design-system-agnostic method: a form heuristic, a color formula with a runnable validator, mark specs, and interaction rules. A validated default palette is documented in `references/palette.md` \u2014 swap that file's values for your brand's. Triggers on: \"chart\", \"graph\", \"plot\", \"data viz\", \"visualization\", \"dashboard\", \"analytics\", \"visualize data\", \"categorical colors\", \"sequential / diverging palette\", \"stat tile\", \"sparkline\", \"heatmap\", \"legend\", \"axis\", \"tooltip\", \"chart colors\", \"color by series\".",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "update-config",
+          "description": "Use this skill to configure the Claude Code harness via settings.json. Automated behaviors (\"from now on when X\", \"each time X\", \"whenever X\", \"before/after X\") require hooks configured in settings.json - the harness executes these, not Claude, so memory/preferences cannot fulfill them. Also use for: permissions (\"allow X\", \"add permission\", \"move permission to\"), env vars (\"set X=Y\"), hook troubleshooting, or any changes to settings.json/settings.local.json files. Examples: \"allow npm commands\", \"add bq permission to global settings\", \"move permission to user settings\", \"set DEBUG=true\", \"when claude stops show X\". For simple settings like theme/model, suggest the /config command.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "verify",
+          "description": "Verify that a code change actually does what it's supposed to by exercising it end-to-end and observing behavior \u2014 drive the affected flow, not just tests or typecheck. Run before committing nontrivial changes; bootstraps this repo's project verify skill if none exists yet. Don't invoke it on a diff that only touches tests, docs, or other code with no runtime surface to drive (a change to product source always has one) \u2014 there's nothing to observe.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "debug",
+          "description": "Enable debug logging for this session and help diagnose issues",
+          "argumentHint": "[issue description]",
+          "builtin": true
+        },
+        {
+          "name": "code-review",
+          "description": "Review the current diff, or a PR number/branch/path target, for correctness bugs (plus reuse/simplification/efficiency cleanups where the model's review recipe covers them) at the given effort level (low/medium: fewer, high-confidence findings; high\u2192max: broader coverage, may include uncertain findings); with no level given, it reuses the level you typed last. Pass --comment to post findings as inline PR comments, or --fix to apply the findings to the working tree after the review.",
+          "argumentHint": "[low|medium|high|xhigh|max] [--fix] [--comment] [<pr#>|<branch>|<path>]",
+          "aliases": [
+            "review"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "simplify",
+          "description": "Review the changed code for reuse, simplification, efficiency, and altitude cleanups, then apply the fixes. Quality only \u2014 it does not hunt for bugs; use /code-review for that.",
+          "argumentHint": "[<target>]",
+          "builtin": true
+        },
+        {
+          "name": "batch",
+          "description": "Research and plan a large-scale change, then execute it in parallel across 5\u201330 isolated worktree agents that each open a PR.",
+          "argumentHint": "<instruction>",
+          "builtin": true
+        },
+        {
+          "name": "fewer-permission-prompts",
+          "description": "Scan your transcripts for common read-only Bash and MCP tool calls, then add a prioritized allowlist to project .claude/settings.json to reduce permission prompts.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "doctor",
+          "description": "Health-check the user's Claude Code setup and fix issues: diagnose installation health \u2014 what the `claude doctor` terminal diagnostics cover \u2014 from local data (duplicate or leftover installs, PATH, unparseable settings files, broken or colliding agent definitions, skills whose frontmatter fails to parse); find unused skills, MCP servers, and plugins versus their context cost and disable dead weight; deduplicate local CLAUDE.md files against checked-in ones; trim checked-in CLAUDE.md files by cutting content a session could derive from the codebase (directory layouts, tech-stack lists, architecture overviews) while keeping gotchas, rationale, and non-standard conventions; migrate always-loaded CLAUDE.md guidance into lazy skills and nested CLAUDE.md files; flag slow hooks and context-heavy extensions; check the installed version is current; make auto mode the default permission mode; and pre-approve frequently denied read-only commands. Use when the user asks for a doctor run, checkup, audit, tune-up, or cleanup of their Claude Code setup or configuration.",
+          "argumentHint": "[prompt-audit [<path>]]",
+          "aliases": [
+            "checkup"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "loop",
+          "description": "Run a prompt or slash command on a recurring interval (e.g. /loop 5m /foo). Omit the interval to let the model self-pace.",
+          "argumentHint": "[interval] [prompt]",
+          "aliases": [
+            "proactive"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "schedule",
+          "description": "Create, update, list, or run scheduled cloud agents (routines) that execute on a cron schedule.",
+          "argumentHint": "",
+          "aliases": [
+            "routines"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "claude-api",
+          "description": "Reference for the Claude API / Anthropic SDK \u2014 model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration.\nTRIGGER \u2014 read BEFORE opening the target file; don't skip because it \"looks like a one-liner\" \u2014 whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) \u2014 never answer from memory; OR the task is LLM-shaped with provider unstated (agent/MCP/tool-definition/multi-agent/RAG/LLM-judge/computer-use; generate/summarize/extract/classify/rewrite/converse over NL; debugging refusals/cutoffs/streaming/tool-calls/tokens).\nSKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.generativeai|genai|mistralai|cohere|ollama'` over the project hits (run this grep FIRST if no provider named \u2014 don't Read the file).",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "run",
+          "description": "Launch and drive this project's app to see a change working. Use when asked to run, start, or screenshot the app, or to confirm a change works in the real app (not just tests). First looks for a project skill that already covers launching the app; otherwise falls back to built-in patterns per project type (CLI, server, TUI, Electron, browser-driven, library).",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "run-skill-generator",
+          "description": "Author or improve the run-<unit> skill - a per-project skill that tells agents how to build, launch, and drive this project's app. Use when the user asks to set up the project, get it running, write run instructions, or verify build/run steps work from a clean environment.",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "advisor",
+          "description": "Let Claude consult a stronger model at key moments",
+          "argumentHint": "[fable|opus|sonnet|off]",
+          "builtin": true
+        },
+        {
+          "name": "agents",
+          "description": "(removed) Ask Claude to create/manage subagents, or edit .claude/agents/",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "auto-mode-setup",
+          "description": "Teach auto mode about your environment, plus optional rule tweaks",
+          "argumentHint": "[--request-id <uuid>] (--wizard posture=\u2026 scope=\u2026 depth=\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
+          "builtin": true
+        },
+        {
+          "name": "autocompact",
+          "description": "Configure the auto-compact window size",
+          "argumentHint": "[auto|<tokens>]",
+          "builtin": true
+        },
+        {
+          "name": "clear",
+          "description": "Start a new session with empty context; previous session stays on disk (resumable with /resume)",
+          "argumentHint": "[name]",
+          "aliases": [
+            "reset",
+            "new"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "color",
+          "description": "Set the prompt bar color for this session",
+          "argumentHint": "[red|blue|green|yellow|purple|orange|pink|cyan|default]",
+          "builtin": true
+        },
+        {
+          "name": "compact",
+          "description": "Free up context by summarizing the conversation so far",
+          "argumentHint": "<optional custom summarization instructions>",
+          "builtin": true
+        },
+        {
+          "name": "config",
+          "description": "Set a setting by key",
+          "argumentHint": "key=value",
+          "aliases": [
+            "settings"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "output-style",
+          "description": "List output styles or switch to one",
+          "argumentHint": "[style]",
+          "builtin": true
+        },
+        {
+          "name": "context",
+          "description": "Show current context usage",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "effort",
+          "description": "Set effort level for model usage",
+          "argumentHint": "<low|medium|high|xhigh|max|auto>",
+          "builtin": true
+        },
+        {
+          "name": "fast",
+          "description": "Toggle fast mode (Opus 5.5)",
+          "argumentHint": "[on|off]",
+          "builtin": true
+        },
+        {
+          "name": "focus",
+          "description": "Toggle focus view: just your prompt, summary, and response",
+          "argumentHint": "[on|off]",
+          "builtin": true
+        },
+        {
+          "name": "heapdump",
+          "description": "Dump the JS heap to the Desktop; on Linux with no Desktop folder, the home directory",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "init",
+          "description": "Initialize a new CLAUDE.md file with codebase documentation",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "mcp",
+          "description": "Manage MCP servers",
+          "argumentHint": "[reconnect|enable|disable [<server>|all]]",
+          "builtin": true
+        },
+        {
+          "name": "import",
+          "description": "Import config from another AI coding agent",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "model",
+          "description": "Set the AI model for Claude Code",
+          "argumentHint": "<model>",
+          "builtin": true
+        },
+        {
+          "name": "__remote-workflow",
+          "description": "Run the workflow script delivered in this session environment (server-launched sessions only)",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "workflow-launch-exec",
+          "description": "Execute a server-launched workflow handoff (workflow_launch event sessions only)",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "reload-plugins",
+          "description": "Activate pending plugin changes in the current session",
+          "argumentHint": "[--force]",
+          "builtin": true
+        },
+        {
+          "name": "reload-skills",
+          "description": "Pick up skills added or changed on disk during this session",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "rename",
+          "description": "Rename the current conversation",
+          "argumentHint": "[name]",
+          "aliases": [
+            "name"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "security-review",
+          "description": "Complete a security review of the pending changes on the current branch",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "usage-credits",
+          "description": "Configure usage credits or request them from your admin when you hit a limit",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "extra-usage",
+          "description": "Renamed to /usage-credits",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "usage",
+          "description": "Show session cost, plan usage, and what's contributing to your limits",
+          "argumentHint": "",
+          "aliases": [
+            "cost",
+            "stats"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "insights",
+          "description": "Generate a report analyzing your Claude Code sessions",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "recap",
+          "description": "Generate a one-line session recap now",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "skill-doctor",
+          "description": "Show which loaded skills are unused and costing context",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "goal",
+          "description": "Set a goal \u2014 keep working until the condition is met",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "design-consent",
+          "description": "Grant Claude agent access to your Design projects",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "design-revoke",
+          "description": "Revoke Claude agent access to your Design projects",
+          "argumentHint": "",
+          "builtin": true
+        },
+        {
+          "name": "list-agents",
+          "description": "List subagents, teammates, and other Claude sessions you can message",
+          "argumentHint": "",
+          "aliases": [
+            "peers"
+          ],
+          "builtin": true
+        },
+        {
+          "name": "team-onboarding",
+          "description": "Help teammates ramp on Claude Code with a guide from your usage",
+          "argumentHint": "",
+          "builtin": true
+        }
+      ],
+      "uuid": "c9f4870e-91e4-4745-bf57-c2594e3ce7f0",
+      "session_id": "0d1563fa-7fcd-454d-a896-e2329030ee14"
+    }
+  },
+  {
+    "rate_limit_info": "RateLimitInfo(status='allowed', resets_at=1790695200, rate_limit_type='five_hour', utilization=None, overage_status='rejected', overage_resets_at=None, overage_disabled_reason='org_level_disabled', raw={'status': 'allowed', 'resetsAt': 1790695200, 'rateLimitType': 'five_hour', 'overageStatus': 'rejected', 'overageDisabledReason': 'org_level_disabled', 'isUsingOverage': False, 'unifiedWindows': {'five_hour': {'utilization': 0, 'resetsAt': 1790695200}}})",
+    "uuid": "612bf1a8-dc62-408f-aad5-ab6504770a96",
+    "session_id": "0d1563fa-7fcd-454d-a896-e2329030ee14"
+  },
+  {
+    "content": [
+      "ToolUseBlock(id='toolu_01W23C8Rkpf9HhK7JEZsGNEW', name='mcp__calculator__add', input={'a': 17, 'b': 25})"
+    ],
+    "model": "claude-opus-5-5",
+    "parent_tool_use_id": null,
+    "error": null,
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 895,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 895
+      },
+      "output_tokens": 24,
+      "service_tier": "standard",
+      "inference_geo": "global"
+    },
+    "message_id": "msg_011CfXZm3GsHS1hZYuUKSPPk",
+    "stop_reason": null,
+    "session_id": "0d1563fa-7fcd-454d-a896-e2329030ee14",
+    "uuid": "e657fa67-ee8e-4180-aa3b-c846b813791e"
+  },
+  {
+    "content": [
+      "ToolResultBlock(tool_use_id='toolu_01W23C8Rkpf9HhK7JEZsGNEW', content=[{'type': 'text', 'text': '42'}], is_error=None)"
+    ],
+    "uuid": "60d70328-f4ec-446f-9e11-6eb6b641fe59",
+    "parent_tool_use_id": null,
+    "tool_use_result": [
+      {
+        "type": "text",
+        "text": "42"
+      }
+    ],
+    "origin": null
+  },
+  {
+    "subtype": "thinking_tokens",
+    "data": {
+      "type": "system",
+      "subtype": "thinking_tokens",
+      "estimated_tokens": 50,
+      "estimated_tokens_delta": 50,
+      "session_id": "0d1563fa-7fcd-454d-a896-e2329030ee14",
+      "uuid": "95fc17ff-79f9-4892-a0c3-a6dac14393ea"
+    }
+  },
+  {
+    "subtype": "thinking_tokens",
+    "data": {
+      "type": "system",
+      "subtype": "thinking_tokens",
+      "estimated_tokens": 196,
+      "estimated_tokens_delta": 146,
+      "session_id": "0d1563fa-7fcd-454d-a896-e2329030ee14",
+      "uuid": "523271e6-c930-4c4a-9a1e-f328a68408b3"
+    }
+  },
+  {
+    "content": [
+      "ThinkingBlock(thinking='', signature='CAQShgYKEAgSGAI4AUIIdGhpbmtpbmcSDB+IrBVA6QRkNQus2hoMbaDZfadJO6eLdkPHIjDezYFRQaOkxKxdeIRhnxbt+Gjuuo7Y+h0Dt0TzuK2LCZQIMH36QhZFyj6+EFTn2NgqowVviI+ZXtHh3QZPfqVqsC5FL/iyJj9+JCvi+qxmuwGuFjXpB5jcKeY1GfVVQA0h7YelOO1LBAYCCiDICaIg3UctuGKg0B42Yfvn8KL6tb0fUq92YAanWuTKlN+tNXcYrOaopQ/0d9kxwXziEtsiMI7PlFiOnGUDnupBYqcci8ZNj7KHXlyJd210NO6tw+r3qTxryVTPxc7NmT6JpDe9J+8Uk4dT1oTtYD8tOFM83RS30OR15oCTGtIwgAheNV/zlKbcGIVxwFTOTG4oQ8uUlnvaXtfbMwW/EP+bixyCOzXT2elP1TbfHsK9ML5rm4jxdMhkdHzn4qsc29KDCVMaBP4LWSjlheJuqtoW/z6Cd8U9+BtxPT3RzGXpYnTdYfGc+EEx9JdtNSOhmZ2uFo+iCD2uc0tgtgS+XbAk7HSQSt5kErLZBsEmOia1OYRVsmS/WmpA9e/xX6yo3iN2czgf7dTQZT8IOoPrM1q/jPZwez4hUm65sQ+tVWTjIuCosUZv+CjhHd7RWtlMOlQV1uNIy7AHS3FUgPl4yb5QiHjJqADL2FkaNUUX0PXNWRFqYCgpZIEEkU8eD8YsgKtP4wNbRb7PAQ03X4h/Megx1EqYa5CDI8+fGNUxdaYzDq63ZcX+SKLecj+XRQXmJagjYlPWySKZizWaMUBsR/3m1MB2G4mKcgWMtXD+Ue6Gn19usiSf2l5WQZF+HZqpz3RLRcv1JDs020BuXrtA3KRPxvu7mEzRi+RwMd90oldnPYyHE9IY1QCyZ53BiHw+W9O2RhEUwBHde3j5pkWHBBDU7+Es0UdpewjNfDJl2aH4HLr7YLaBfJ4MTjHxS20x8/b1Pm04+t0IinZxHSL97q2fm+LCNdULKtGjySX1NcQYEQkUg79dG0pwgtgYAQ==')"
+    ],
+    "model": "claude-opus-5-5",
+    "parent_tool_use_id": null,
+    "error": null,
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 362,
+      "cache_read_input_tokens": 895,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 362
+      },
+      "output_tokens": 2,
+      "service_tier": "standard",
+      "inference_geo": "global"
+    },
+    "message_id": "msg_011CfXZmFsPtWtB2EMKWc1nZ",
+    "stop_reason": null,
+    "session_id": "0d1563fa-7fcd-454d-a896-e2329030ee14",
+    "uuid": "ddcc5526-773d-407d-baca-dab9cf6a27fa"
+  },
+  {
+    "content": [
+      "TextBlock(text=\"The add tool gave **17 + 25 = 42**.\\n\\nSeparately, some MCP servers need to be authorized before their tools will work. These include ChEMBL, Clinical Trials, Gamma, Microsoft Learn, Open Targets, PDF Viewer, PubMed, Scholar Gateway and bioRxiv. They're all claude.ai connectors, so you can authorize them in your claude.ai connector settings. They'll stay unavailable until you do. You don't need them for this calculation.\")"
+    ],
+    "model": "claude-opus-5-5",
+    "parent_tool_use_id": null,
+    "error": null,
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 362,
+      "cache_read_input_tokens": 895,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 362
+      },
+      "output_tokens": 2,
+      "service_tier": "standard",
+      "inference_geo": "global"
+    },
+    "message_id": "msg_011CfXZmFsPtWtB2EMKWc1nZ",
+    "stop_reason": null,
+    "session_id": "0d1563fa-7fcd-454d-a896-e2329030ee14",
+    "uuid": "18d5130e-6912-425e-88f5-936be453e42d"
+  },
+  {
+    "subtype": "success",
+    "duration_ms": 6699,
+    "duration_api_ms": 7389,
+    "is_error": false,
+    "num_turns": 2,
+    "session_id": "0d1563fa-7fcd-454d-a896-e2329030ee14",
+    "stop_reason": "end_turn",
+    "total_cost_usd": 0.017002,
+    "usage": {
+      "input_tokens": 4,
+      "cache_creation_input_tokens": 1257,
+      "cache_read_input_tokens": 895,
+      "output_tokens": 289,
+      "output_tokens_details": {
+        "thinking_tokens": 50
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1257,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 215,
+          "cache_read_input_tokens": 895,
+          "cache_creation_input_tokens": 362,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 362
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "result": "The add tool gave **17 + 25 = 42**.\n\nSeparately, some MCP servers need to be authorized before their tools will work. These include ChEMBL, Clinical Trials, Gamma, Microsoft Learn, Open Targets, PDF Viewer, PubMed, Scholar Gateway and bioRxiv. They're all claude.ai connectors, so you can authorize them in your claude.ai connector settings. They'll stay unavailable until you do. You don't need them for this calculation.",
+    "structured_output": null,
+    "model_usage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 906,
+        "outputTokens": 13,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000971,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "thinkingTokens": 0,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      },
+      "claude-opus-5-5": {
+        "inputTokens": 4,
+        "outputTokens": 289,
+        "cacheReadInputTokens": 895,
+        "cacheCreationInputTokens": 1257,
+        "webSearchRequests": 0,
+        "costUSD": 0.016031,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 50,
+        "canonicalModel": "claude-opus-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "permission_denials": [],
+    "deferred_tool_use": null,
+    "errors": null,
+    "api_error_status": null,
+    "uuid": "f5b1ac4c-bbc7-4470-9e57-b374d8fa93d5",
+    "terminal_reason": "completed",
+    "origin": null
+  }
+]
