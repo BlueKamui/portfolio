@@ -1,0 +1,49 @@
+{
+  "a": "48213756123456789",
+  "b": "91847329876543210",
+  "true_sum": "140061085999999999",
+  "model": "claude-haiku-4-5",
+  "repeats": 4,
+  "finished": true,
+  "results": {
+    "What is {a} plus {b}?": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "Please calculate the sum of {a} and {b}.": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "{a} + {b} = ?": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "I need the total when {a} is added to {b}.": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "A shop sold {a} items in its first year and {b} items in its second. How many items did it sell in total?": [
+      false,
+      true,
+      true,
+      true
+    ]
+  },
+  "counts": {
+    "What is {a} plus {b}?": 3,
+    "Please calculate the sum of {a} and {b}.": 3,
+    "{a} + {b} = ?": 3,
+    "I need the total when {a} is added to {b}.": 4,
+    "A shop sold {a} items in its first year and {b} items in its second. How many items did it sell in total?": 3
+  },
+  "low": 3,
+  "high": 4
+}

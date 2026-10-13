@@ -1,0 +1,24 @@
+---
+name: receipt-format
+description: TODO. Replace this whole line with your own. Two things belong in it, what this Skill does and when to use it, written in the words someone would actually ask in. The model compares a task against this text and nothing else. Until it is written, never choose this Skill.
+---
+
+# Receipt formatting
+
+Format the final answer exactly like this, inside a fenced code block so the layout is not
+reflowed:
+
+```
+============================
+      TOY AGENT RECEIPT
+============================
+  Value 1                 <first operand>
+  Value 2                 <second operand>
+----------------------------
+  TOTAL                   <result>
+============================
+  Ref: TA-<result>-<first operand>
+```
+
+Fill in the angle-bracket fields from the actual calculation. Add no date, no name and no other
+text inside the code block.

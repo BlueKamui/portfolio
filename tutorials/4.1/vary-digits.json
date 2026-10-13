@@ -1,0 +1,30 @@
+{
+  "model": "claude-haiku-4-5",
+  "repeats": 4,
+  "results": {
+    "3": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "8": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "17": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "26": [
+      true,
+      true,
+      false,
+      true
+    ]
+  }
+}

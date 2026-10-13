@@ -1,0 +1,538 @@
+[
+  {
+    "pattern": "single-shot",
+    "model": "claude-haiku-4-5",
+    "extra_cases": true,
+    "repeats": [
+      {
+        "repeat_index": 1,
+        "n_correct": 21,
+        "n_total": 23,
+        "total_cost_usd": 0.179673,
+        "cases": [
+          {
+            "case_id": 0,
+            "tier": "easy",
+            "true_sum": "68",
+            "answer": "23 + 45 = 68\n\nANSWER: 68",
+            "correct": true,
+            "cost_usd": 0.00124629,
+            "input_tokens": 723,
+            "output_tokens": 82,
+            "wall_clock_s": 2.88
+          },
+          {
+            "case_id": 1,
+            "tier": "easy",
+            "true_sum": "96",
+            "answer": "7 + 89 = 96\n\nANSWER: 96",
+            "correct": true,
+            "cost_usd": 0.00130739,
+            "input_tokens": 724,
+            "output_tokens": 94,
+            "wall_clock_s": 2.78
+          },
+          {
+            "case_id": 2,
+            "tier": "easy",
+            "true_sum": "579",
+            "answer": "456 + 123 = 579\n\nANSWER: 579",
+            "correct": true,
+            "cost_usd": 0.00151879,
+            "input_tokens": 725,
+            "output_tokens": 136,
+            "wall_clock_s": 3.94
+          },
+          {
+            "case_id": 3,
+            "tier": "easy",
+            "true_sum": "99",
+            "answer": "91 + 8 = 99\n\nANSWER: 99",
+            "correct": true,
+            "cost_usd": 0.00123519,
+            "input_tokens": 722,
+            "output_tokens": 80,
+            "wall_clock_s": 4.59
+          },
+          {
+            "case_id": 4,
+            "tier": "easy",
+            "true_sum": "301",
+            "answer": "34 + 267 = 301\n\nANSWER: 301",
+            "correct": true,
+            "cost_usd": 0.00127399,
+            "input_tokens": 735,
+            "output_tokens": 85,
+            "wall_clock_s": 2.67
+          },
+          {
+            "case_id": 5,
+            "tier": "easy",
+            "true_sum": "703",
+            "answer": "608 + 95 = 703\n\nANSWER: 703",
+            "correct": true,
+            "cost_usd": 0.0015362899999999998,
+            "input_tokens": 723,
+            "output_tokens": 140,
+            "wall_clock_s": 3.33
+          },
+          {
+            "case_id": 6,
+            "tier": "medium",
+            "true_sum": "9976",
+            "answer": "3847 + 6129 = 9976\n\nANSWER: 9976",
+            "correct": true,
+            "cost_usd": 0.00171509,
+            "input_tokens": 726,
+            "output_tokens": 175,
+            "wall_clock_s": 3.32
+          },
+          {
+            "case_id": 7,
+            "tier": "medium",
+            "true_sum": "195.75",
+            "answer": "Let me calculate the sum of 128.45 and 67.3:\n\n128.45 + 67.3 = 195.75\n\nANSWER: 195.75",
+            "correct": true,
+            "cost_usd": 0.00151019,
+            "input_tokens": 729,
+            "output_tokens": 133,
+            "wall_clock_s": 3.17
+          },
+          {
+            "case_id": 8,
+            "tier": "medium",
+            "true_sum": "150810",
+            "answer": "92140 + 58670 = 150810\n\nANSWER: 150810",
+            "correct": true,
+            "cost_usd": 0.00210339,
+            "input_tokens": 724,
+            "output_tokens": 253,
+            "wall_clock_s": 3.76
+          },
+          {
+            "case_id": 9,
+            "tier": "medium",
+            "true_sum": "745.878",
+            "answer": "To find the total, I need to add the two amounts:\n\n456.72 + 289.158 = 745.878\n\nANSWER: 745.878",
+            "correct": true,
+            "cost_usd": 0.00140289,
+            "input_tokens": 739,
+            "output_tokens": 110,
+            "wall_clock_s": 3.31
+          },
+          {
+            "case_id": 10,
+            "tier": "medium",
+            "true_sum": "750197",
+            "answer": "700321 + 49876 = 750197\n\nANSWER: 750197",
+            "correct": true,
+            "cost_usd": 0.00199899,
+            "input_tokens": 725,
+            "output_tokens": 232,
+            "wall_clock_s": 4.16
+          },
+          {
+            "case_id": 11,
+            "tier": "medium",
+            "true_sum": "211.25",
+            "answer": "62.5 + 148.75 = 211.25\n\nANSWER: 211.25",
+            "correct": true,
+            "cost_usd": 0.00133329,
+            "input_tokens": 728,
+            "output_tokens": 98,
+            "wall_clock_s": 3.37
+          },
+          {
+            "case_id": 12,
+            "tier": "medium",
+            "true_sum": "911838",
+            "answer": "814205 + 97633 = 911838\n\nANSWER: 911838",
+            "correct": true,
+            "cost_usd": 0.00230199,
+            "input_tokens": 727,
+            "output_tokens": 292,
+            "wall_clock_s": 3.56
+          },
+          {
+            "case_id": 13,
+            "tier": "hard",
+            "true_sum": "1400610859999",
+            "answer": "482137561234 + 918473298765 = 1400610859999\n\nANSWER: 1400610859999",
+            "correct": true,
+            "cost_usd": 0.00448979,
+            "input_tokens": 728,
+            "output_tokens": 730,
+            "wall_clock_s": 5.85
+          },
+          {
+            "case_id": 14,
+            "tier": "hard",
+            "true_sum": "67400.000000",
+            "answer": "ANSWER: 67400",
+            "correct": true,
+            "cost_usd": 0.00200879,
+            "input_tokens": 743,
+            "output_tokens": 230,
+            "wall_clock_s": 4.23
+          },
+          {
+            "case_id": 15,
+            "tier": "hard",
+            "true_sum": "12001333326002888",
+            "answer": "I need to add these two 16-digit numbers:\n\n7003210004998321 + 4998123321004567\n\nLet me add them carefully from right to left, tracking carries:\n\n```\n  7,003,210,004,998,321\n+ 4,998,123,321,004,567\n_______________________\n```\n\nWorking right to left:\n- 1 + 7 = 8\n- 2 + 6 = 8  \n- 3 + 5 = 8\n- 8 + 4 = 12 \u2192 2, carry 1\n- 9 + 0 + 1 = 10 \u2192 0, carry 1\n- 9 + 0 + 1 = 10 \u2192 0, carry 1\n- 4 + 1 + 1 = 6\n- 0 + 2 = 2\n- 0 + 3 = 3\n- 0 + 3 = 3\n- 1 + 2 = 3\n- 2 + 1 = 3\n- 3 + 8 = 11 \u2192 1, carry 1\n- 0 + 9 + 1 = 10 \u2192 0, carry 1\n- 0 + 9 + 1 = 10 \u2192 0, carry 1\n- 7 + 4 + 1 = 12 \u2192 2, carry 1\n- Final carry: 1\n\nANSWER: 12001333236008888",
+            "correct": false,
+            "cost_usd": 0.03421079,
+            "input_tokens": 733,
+            "output_tokens": 6673,
+            "wall_clock_s": 39.68
+          },
+          {
+            "case_id": 16,
+            "tier": "hard",
+            "true_sum": "8512295329.47754",
+            "answer": "7482910573.28471 + 1029384756.19283 = 8512295329.47754\n\nANSWER: 8512295329.47754",
+            "correct": true,
+            "cost_usd": 0.00484559,
+            "input_tokens": 736,
+            "output_tokens": 799,
+            "wall_clock_s": 6.72
+          },
+          {
+            "case_id": 17,
+            "tier": "hard",
+            "true_sum": "1000000000000000",
+            "answer": "To calculate 999999999999999 + 1:\n\n999999999999999 + 1 = 1000000000000000\n\nANSWER: 1000000000000000",
+            "correct": true,
+            "cost_usd": 0.0017416900000000002,
+            "input_tokens": 729,
+            "output_tokens": 180,
+            "wall_clock_s": 3.48
+          },
+          {
+            "case_id": 18,
+            "tier": "hard",
+            "true_sum": "140061085999999999",
+            "answer": "I'll add these two large numbers step by step:\n\n```\n  48213756123456789\n+ 91847329876543210\n```\n\nAdding column by column from right to left:\n\n- Positions 1-9: 9+0, 8+1, 7+2, 6+3, 5+4, 4+5, 3+6, 2+7, 1+8 = 999999999\n- Position 10: 6+9 = 15 (write 5, carry 1)\n- Position 11: 5+2+1 = 8\n- Position 12: 7+3 = 10 (write 0, carry 1)\n- Position 13: 3+7+1 = 11 (write 1, carry 1)\n- Position 14: 1+4+1 = 6\n- Position 15: 2+8 = 10 (write 0, carry 1)\n- Position 16: 8+1+1 = 10 (write 0, carry 1)\n- Position 17: 4+9+1 = 14\n\nANSWER: 140061810999999999",
+            "correct": false,
+            "cost_usd": 0.02161319,
+            "input_tokens": 732,
+            "output_tokens": 4145,
+            "wall_clock_s": 24.78
+          },
+          {
+            "case_id": 19,
+            "tier": "hard",
+            "true_sum": "140061085999999999999999999",
+            "answer": "Looking at this problem, I need to add these two very large numbers:\n\n48213756123456789012345678\n91847329876543210987654321\n\nLet me work through this systematically by breaking them into groups and adding from right to left:\n\nBreaking into 3-digit sections from the right:\n- 48 | 213 | 756 | 123 | 456 | 789 | 012 | 345 | 678\n- 91 | 847 | 329 | 876 | 543 | 210 | 987 | 654 | 321\n\nAdding each section:\n- 678 + 321 = 999\n- 345 + 654 = 999\n- 012 + 987 = 999\n- 789 + 210 = 999\n- 456 + 543 = 999\n- 123 + 876 = 999\n- 756 + 329 = 1085 (write 085, carry 1)\n- 213 + 847 + 1 = 1061 (write 061, carry 1)\n- 48 + 91 + 1 = 140\n\nReading from left to right: 140 | 061 | 085 | 999 | 999 | 999 | 999 | 999 | 999\n\nANSWER: 140061085999999999999999999",
+            "correct": true,
+            "cost_usd": 0.036174090000000006,
+            "input_tokens": 751,
+            "output_tokens": 7051,
+            "wall_clock_s": 39.98
+          },
+          {
+            "case_id": 100,
+            "tier": "easy",
+            "true_sum": "430",
+            "answer": "372 + 58 = 430\n\nANSWER: 430",
+            "correct": true,
+            "cost_usd": 0.00141079,
+            "input_tokens": 723,
+            "output_tokens": 115,
+            "wall_clock_s": 2.89
+          },
+          {
+            "case_id": 101,
+            "tier": "medium",
+            "true_sum": "263.995",
+            "answer": "Adding 245.67 and 18.325:\n\n245.67 + 18.325 = 263.995\n\nANSWER: 263.995",
+            "correct": true,
+            "cost_usd": 0.0017332900000000002,
+            "input_tokens": 728,
+            "output_tokens": 178,
+            "wall_clock_s": 3.22
+          },
+          {
+            "case_id": 102,
+            "tier": "hard",
+            "true_sum": "100104278583663987758",
+            "answer": "I'll calculate this step by step.\n\n  73920184756102938475\n+ 26184093827561049283\n_______________________\n\nAdding column by column from right to left:\n\n- Ones: 5 + 3 = 8\n- Tens: 7 + 8 = 15 (write 5, carry 1)\n- Hundreds: 4 + 2 + 1 = 7\n- Thousands: 8 + 9 = 17 (write 7, carry 1)\n- Ten thousands: 3 + 4 + 1 = 8\n- Hundred thousands: 9 + 0 = 9\n- Millions: 8 + 5 = 13 (write 3, carry 1)\n- Ten millions: 2 + 1 + 1 = 4\n- Hundred millions: 0 + 6 = 6\n- Billions: 1 + 7 = 8\n- Ten billions: 0 + 2 = 2\n- Hundred billions: 2 + 8 = 10 (write 0, carry 1)\n- Trillions: 0 + 5 + 1 = 6\n- Ten trillions: 1 + 2 = 3\n- Hundred trillions: 9 + 6 = 15 (write 5, carry 1)\n- Quadrillions: 7 + 2 + 1 = 10 (write 0, carry 1)\n- Ten quadrillions: 3 + 1 + 1 = 5... \n\nLet me recalculate more carefully:\n- Quadrillions: 7 + 2 + 1 = 10 (write 0, carry 1)\n- Ten quadrillions: 3 + 6 + 1 = 10 (write 0, carry 1)\n- Hundred quadrillions: 9 + 1 + 1 = 11 (write 1, carry 1)\n- Quintillions: 3 + 2 + 1 = 6... \n\nActually, let me recalculate:\n- Positions 17-19: 9 + 1 + 1 = 11 (pos 17), 3 + 6 + 1 = 10 (pos 18), 7 + 2 + 1 = 10 (pos 19)\n\nThis gives: 100104278583663987758\n\nANSWER: 100104278583663987758",
+            "correct": true,
+            "cost_usd": 0.050960990000000005,
+            "input_tokens": 737,
+            "output_tokens": 10022,
+            "wall_clock_s": 56.54
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pattern": "tool-loop",
+    "model": "claude-haiku-4-5",
+    "extra_cases": true,
+    "repeats": [
+      {
+        "repeat_index": 1,
+        "n_correct": 21,
+        "n_total": 23,
+        "total_cost_usd": 0.129345,
+        "cases": [
+          {
+            "case_id": 0,
+            "tier": "easy",
+            "true_sum": "68",
+            "answer": "ANSWER: 68",
+            "correct": true,
+            "cost_usd": 0.0040067900000000005,
+            "input_tokens": 3044,
+            "output_tokens": 170,
+            "wall_clock_s": 4.12
+          },
+          {
+            "case_id": 1,
+            "tier": "easy",
+            "true_sum": "96",
+            "answer": "ANSWER: 96",
+            "correct": true,
+            "cost_usd": 0.004074390000000001,
+            "input_tokens": 3061,
+            "output_tokens": 180,
+            "wall_clock_s": 4.22
+          },
+          {
+            "case_id": 2,
+            "tier": "easy",
+            "true_sum": "579",
+            "answer": "ANSWER: 579",
+            "correct": true,
+            "cost_usd": 0.0040117899999999995,
+            "input_tokens": 3048,
+            "output_tokens": 170,
+            "wall_clock_s": 4.15
+          },
+          {
+            "case_id": 3,
+            "tier": "easy",
+            "true_sum": "99",
+            "answer": "ANSWER: 99",
+            "correct": true,
+            "cost_usd": 0.00402369,
+            "input_tokens": 3059,
+            "output_tokens": 170,
+            "wall_clock_s": 4.33
+          },
+          {
+            "case_id": 4,
+            "tier": "easy",
+            "true_sum": "301",
+            "answer": "ANSWER: 301",
+            "correct": true,
+            "cost_usd": 0.00407049,
+            "input_tokens": 3071,
+            "output_tokens": 177,
+            "wall_clock_s": 4.18
+          },
+          {
+            "case_id": 5,
+            "tier": "easy",
+            "true_sum": "703",
+            "answer": "ANSWER: 703",
+            "correct": true,
+            "cost_usd": 0.004042790000000001,
+            "input_tokens": 3050,
+            "output_tokens": 176,
+            "wall_clock_s": 4.15
+          },
+          {
+            "case_id": 6,
+            "tier": "medium",
+            "true_sum": "9976",
+            "answer": "ANSWER: 9976",
+            "correct": true,
+            "cost_usd": 0.00405609,
+            "input_tokens": 3052,
+            "output_tokens": 178,
+            "wall_clock_s": 4.15
+          },
+          {
+            "case_id": 7,
+            "tier": "medium",
+            "true_sum": "195.75",
+            "answer": "ANSWER: 195.75",
+            "correct": true,
+            "cost_usd": 0.00423119,
+            "input_tokens": 3065,
+            "output_tokens": 210,
+            "wall_clock_s": 7.8
+          },
+          {
+            "case_id": 8,
+            "tier": "medium",
+            "true_sum": "150810",
+            "answer": "ANSWER: 150810",
+            "correct": true,
+            "cost_usd": 0.00432139,
+            "input_tokens": 3052,
+            "output_tokens": 231,
+            "wall_clock_s": 4.76
+          },
+          {
+            "case_id": 9,
+            "tier": "medium",
+            "true_sum": "745.878",
+            "answer": "ANSWER: 745.878",
+            "correct": true,
+            "cost_usd": 0.00415689,
+            "input_tokens": 3098,
+            "output_tokens": 189,
+            "wall_clock_s": 4.25
+          },
+          {
+            "case_id": 10,
+            "tier": "medium",
+            "true_sum": "750197",
+            "answer": "ANSWER: 750197",
+            "correct": true,
+            "cost_usd": 0.00406599,
+            "input_tokens": 3049,
+            "output_tokens": 181,
+            "wall_clock_s": 4.33
+          },
+          {
+            "case_id": 11,
+            "tier": "medium",
+            "true_sum": "211.25",
+            "answer": "ANSWER: 211.25",
+            "correct": true,
+            "cost_usd": 0.00420529,
+            "input_tokens": 3060,
+            "output_tokens": 206,
+            "wall_clock_s": 4.26
+          },
+          {
+            "case_id": 12,
+            "tier": "medium",
+            "true_sum": "911838",
+            "answer": "ANSWER: 911838",
+            "correct": true,
+            "cost_usd": 0.00404699,
+            "input_tokens": 3057,
+            "output_tokens": 175,
+            "wall_clock_s": 4.17
+          },
+          {
+            "case_id": 13,
+            "tier": "hard",
+            "true_sum": "1400610859999",
+            "answer": "ANSWER: 1400610859999",
+            "correct": true,
+            "cost_usd": 0.00411029,
+            "input_tokens": 3064,
+            "output_tokens": 187,
+            "wall_clock_s": 4.23
+          },
+          {
+            "case_id": 14,
+            "tier": "hard",
+            "true_sum": "67400.000000",
+            "answer": "ANSWER: 67400.0",
+            "correct": true,
+            "cost_usd": 0.0044342900000000005,
+            "input_tokens": 3099,
+            "output_tokens": 233,
+            "wall_clock_s": 4.57
+          },
+          {
+            "case_id": 15,
+            "tier": "hard",
+            "true_sum": "12001333326002888",
+            "answer": "ANSWER: 12001333326002888",
+            "correct": true,
+            "cost_usd": 0.00407879,
+            "input_tokens": 3085,
+            "output_tokens": 167,
+            "wall_clock_s": 4.39
+          },
+          {
+            "case_id": 16,
+            "tier": "hard",
+            "true_sum": "8512295329.47754",
+            "answer": "ANSWER: 8512295329.47754",
+            "correct": true,
+            "cost_usd": 0.00418059,
+            "input_tokens": 3101,
+            "output_tokens": 193,
+            "wall_clock_s": 3.83
+          },
+          {
+            "case_id": 17,
+            "tier": "hard",
+            "true_sum": "1000000000000000",
+            "answer": "ANSWER: 1000000000000000",
+            "correct": true,
+            "cost_usd": 0.004290189999999999,
+            "input_tokens": 3109,
+            "output_tokens": 213,
+            "wall_clock_s": 4.64
+          },
+          {
+            "case_id": 18,
+            "tier": "hard",
+            "true_sum": "140061085999999999",
+            "answer": "ANSWER: 140061086000000010",
+            "correct": false,
+            "cost_usd": 0.00435819,
+            "input_tokens": 3100,
+            "output_tokens": 229,
+            "wall_clock_s": 4.59
+          },
+          {
+            "case_id": 19,
+            "tier": "hard",
+            "true_sum": "140061085999999999999999999",
+            "answer": "ANSWER: 140061086000000000000000000",
+            "correct": false,
+            "cost_usd": 0.006722589999999999,
+            "input_tokens": 3141,
+            "output_tokens": 683,
+            "wall_clock_s": 8.48
+          },
+          {
+            "case_id": 100,
+            "tier": "easy",
+            "true_sum": "430",
+            "answer": "ANSWER: 430",
+            "correct": true,
+            "cost_usd": 0.0039997900000000005,
+            "input_tokens": 3042,
+            "output_tokens": 169,
+            "wall_clock_s": 3.98
+          },
+          {
+            "case_id": 101,
+            "tier": "medium",
+            "true_sum": "263.995",
+            "answer": "ANSWER: 263.995",
+            "correct": true,
+            "cost_usd": 0.00419629,
+            "input_tokens": 3061,
+            "output_tokens": 204,
+            "wall_clock_s": 4.35
+          },
+          {
+            "case_id": 102,
+            "tier": "hard",
+            "true_sum": "100104278583663987758",
+            "answer": "Note: The calculator function uses floating-point arithmetic, which can lose precision with very large integers. Let me verify this with manual calculation:\n\n73920184756102938475 + 26184093827561049283\n\nCalculating column by column from right to left:\n- Units: 5 + 3 = 8\n- Tens: 7 + 8 = 15 (write 5, carry 1)\n- Hundreds: 4 + 2 + 1 = 7\n- Continuing through all digits with proper carrying...\n\nThe exact sum is: **100104278583663987758**\n\nANSWER: 100104278583663987758",
+            "correct": true,
+            "cost_usd": 0.03565999,
+            "input_tokens": 3115,
+            "output_tokens": 4360,
+            "wall_clock_s": 29.03
+          }
+        ]
+      }
+    ]
+  }
+]

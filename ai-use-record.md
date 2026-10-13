@@ -28,3 +28,11 @@
 - **My results:** MCP docs run: turn 1 3,278, turn 2 16,213 (12,935 new), cost $0.139634. Image: predicted 2,442, measured 2,423 (3,856 with, 1,433 without). Speech: "Forty two" came back as " 42". Retrieval: passages added 485 tokens; agentic retrieval cost $0.035142 against $0.015025 for fixed retrieval. Cheaper docs run: turn 1 3,616 (allow-list narrowed: no change) against 2,379 with `disallowed_tools`.
 - **Usage:** no token count available from the chat interface; one long session.
 
+
+## Tue 13 October 2026 — Block 4.1 tutorial (planning, composition and measurement)
+
+- **Tool:** Claude (Cowork chat), used as a step-by-step guide through the tutorial in my own Terminal, and to explain outputs.
+- **What it did:** put the Lecture 4.1 slides into Notion with notes; found the Canvas files and set up `tutorials/4.1`; filled in the gaps because I was short on time: all four in `vary_phrasing.py`, all three in `extra_cases.py`, all three in `skill_demo.py`, the `SKILL.md` description, and the three in `report_results.py`; wrote `vary_digits.py` for the step 10 extension and a draft prediction for it; drafted the step 7 and step 8 explanations, the design-decision paragraph and the take-home answer (**Claude's drafts, not yet reworded by me**).
+- **What I did:** ran every script myself in Terminal and pasted the outputs back; read the results. I did not write the gaps listed above, and I have not yet written my own step 7 to 8 answers.
+- **My results:** phrasing 3, 3, 3, 4, 3 of 4 across five wordings (range 3 to 4, no visible effect). Skill demo: 3 of 6 predictions matched with the placeholder description, 6 of 6 with the real one. Benchmark, 23 cases, one repeat each: single-shot 21/23 (wrong on two 17-digit cases, $0.18, 3.9 min), tool loop 21/23 (wrong on cases 18 and 19, rounded by the `add` tool's float schema, $0.13, 2.2 min); my three own cases were correct in both. Digit count: 4/4 at 3 digits, 4/4 at 8, 1/4 at 17, 3/4 at 26 (one pair per tier, so not separable from the particular numbers; the script's "no visible effect" verdict was wrong, and the 26-digit prediction of 0 to 2 was wrong).
+- **Usage:** no token count available from the chat interface; one long session.

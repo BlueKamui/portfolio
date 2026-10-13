@@ -1,0 +1,3 @@
+Prediction for vary_digits.py (written before running, drafted by Claude, Youssef to confirm/edit):
+3 digits 4/4, 8 digits 4/4, 17 digits 2-4 of 4, 26 digits 0-2 of 4.
+Digit count should move the count; phrasing did not (3-4 of 4 across all five wordings).
