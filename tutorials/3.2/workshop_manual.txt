@@ -1,0 +1,81 @@
+SPOKE AND SPROCKET: WORKSHOP HANDBOOK
+
+A fictional bike workshop, invented for this course. None of these prices, names or policies are
+real, so no model can know them from its training.
+
+# Opening hours and booking
+
+The workshop is open Tuesday to Saturday, 8:30 to 17:30. We are closed on Sundays and Mondays, and
+those days do not count as working days. Book by phone or at the counter. We do not take bookings
+by email. Drop your bike off before 10:00 on the booked day. A bike that arrives after 10:00 moves
+to the next free slot.
+
+# Service levels and prices
+
+We offer three service levels. The Safety Check costs 35 pounds and takes about 45 minutes while
+you wait. It covers brakes, tyres, headset play and a short test ride in the yard.
+
+The Full Service costs 119 pounds. It includes everything in the Safety Check, plus a full
+drivetrain clean, gear and brake cable adjustment, wheel truing, and new brake pads if the old
+ones are worn past our limit. Parts other than brake pads are charged on top.
+
+The Strip-down Overhaul costs 229 pounds. Every bearing is taken apart, cleaned and regreased, and
+all inner cables and outer housing are replaced.
+
+# How long a service takes
+
+A Full Service is ready at 16:00 on the third working day after drop-off. An Overhaul takes five
+working days. If we find a fault that needs a part we do not stock, we phone you before ordering
+it, and the clock stops until the part arrives.
+
+# Chain wear
+
+We measure chain wear with a checker gauge at every service. At 0.5 per cent stretch we recommend
+a new chain, 28 pounds fitted for an 11-speed chain. At 0.75 per cent the cassette has usually
+worn with it, and we replace both together for 85 pounds fitted.
+
+# Skipping under load
+
+If the chain skips across the sprockets when you stand on the pedals, but shifts cleanly when you
+spin gently, the cause is almost always a worn chain and cassette, not the gear adjustment. We
+check wear first, then the alignment of the rear hanger, and only then the cable tension.
+Adjusting the cable on a worn drivetrain hides the problem for about a week.
+
+# Brakes
+
+Rim brake pads are replaced when less than 1.5 mm of pad material is left, and disc brake pads when
+less than 1 mm is left. We bleed hydraulic brakes only with the fluid the manufacturer specifies.
+Mineral oil and DOT fluid must never be mixed: each one destroys the seals made for the other. A
+bleed costs 25 pounds per brake.
+
+# Tubeless tyres
+
+Tubeless sealant dries out. We top it up every six months, or at any service, for 8 pounds per
+wheel. A tyre that will not seat on the rim is refitted with new rim tape for 15 pounds per wheel.
+
+# Electric bikes
+
+We service the brakes, gears and wheels of electric bikes at the normal prices, plus 15 pounds
+because of the extra weight. We do not open motors or batteries. Those go back to the dealer of the
+brand that made them. Remove the battery before you drop the bike off, and keep it at home.
+
+# Loan bikes
+
+A loan bike is available during a Full Service or an Overhaul, for a refundable deposit of 50
+pounds. There are four loan bikes, all hybrids with a medium frame, so book one when you book the
+service.
+
+# Collection and storage
+
+We send a text message when your bike is ready. Bikes that are not collected within 14 days of that
+message are charged 3 pounds per day for storage.
+
+# Warranty on our work
+
+Our labour is guaranteed for 90 days. If a cable we adjusted slips back within that time, we
+adjust it again for free. Parts carry the warranty of the company that made them, not ours.
+
+# Wheel building
+
+We build wheels by hand to order. A pair takes four weeks from the day the rims and hubs arrive,
+and starts from 320 pounds. Every wheel is re-tensioned free of charge after the first 300 km.
