@@ -43,5 +43,5 @@
 - **Tool:** Claude (Cowork chat), used as a step-by-step guide and to write code for the take-home.
 - **What it did:** put the Lecture 4.2 slides into Notion with notes; read the Day 4 take-home and PolyAI workshop pages; checked my `tutorials/4.1` benchmark results; proposed the platform (voice currency assistant) when I could not remember my day 4 choice; wrote `tutorials/4.2/voice_currency.py` by combining my 3.1 currency tool and 3.2 speech tools; drafted `design-and-failure-mode.md` (**Claude's draft, not yet reworded by me**, because I was short on time).
 - **What I did:** ran the script myself in Terminal and pasted the output back; confirmed the platform choice.
-- **My results:** one run of the `eur` case: transcribe, convert, speak and structured answer in 6 turns, $0.0173, `[check] correct: 58.5 EUR`, `answer.wav` saved. The `yen` repeat count is not yet run.
+- **My results:** one run of the `eur` case: transcribe, convert, speak and structured answer in 6 turns, $0.0173, `[check] correct: 58.5 EUR`, `answer.wav` saved. The `yen` case, 10 repeats: 10 of 10 correct (null every time).
 - **Usage:** no token count available from the chat interface; one long session.
