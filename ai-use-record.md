@@ -36,3 +36,12 @@
 - **What I did:** ran every script myself in Terminal and pasted the outputs back; read the results. I did not write the gaps listed above, and I have not yet written my own step 7 to 8 answers.
 - **My results:** phrasing 3, 3, 3, 4, 3 of 4 across five wordings (range 3 to 4, no visible effect). Skill demo: 3 of 6 predictions matched with the placeholder description, 6 of 6 with the real one. Benchmark, 23 cases, one repeat each: single-shot 21/23 (wrong on two 17-digit cases, $0.18, 3.9 min), tool loop 21/23 (wrong on cases 18 and 19, rounded by the `add` tool's float schema, $0.13, 2.2 min); my three own cases were correct in both. Digit count: 4/4 at 3 digits, 4/4 at 8, 1/4 at 17, 3/4 at 26 (one pair per tier, so not separable from the particular numbers; the script's "no visible effect" verdict was wrong, and the 26-digit prediction of 0 to 2 was wrong).
 - **Usage:** no token count available from the chat interface; one long session.
+
+
+## Tue 13 October 2026 — Block 4.2 take-home (platform end to end)
+
+- **Tool:** Claude (Cowork chat), used as a step-by-step guide and to write code for the take-home.
+- **What it did:** put the Lecture 4.2 slides into Notion with notes; read the Day 4 take-home and PolyAI workshop pages; checked my `tutorials/4.1` benchmark results; proposed the platform (voice currency assistant) when I could not remember my day 4 choice; wrote `tutorials/4.2/voice_currency.py` by combining my 3.1 currency tool and 3.2 speech tools; drafted `design-and-failure-mode.md` (**Claude's draft, not yet reworded by me**, because I was short on time).
+- **What I did:** ran the script myself in Terminal and pasted the output back; confirmed the platform choice.
+- **My results:** one run of the `eur` case: transcribe, convert, speak and structured answer in 6 turns, $0.0173, `[check] correct: 58.5 EUR`, `answer.wav` saved. The `yen` repeat count is not yet run.
+- **Usage:** no token count available from the chat interface; one long session.
